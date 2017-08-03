@@ -8,6 +8,7 @@ import { PartsComponent } from './parts/parts.component';
 import { PreviewComponent } from './preview/preview.component';
 import { PresetComponent } from './preset/preset.component';
 import { ModelComponent } from './model/model.component';
+import { CarModelService } from 'app/car-model.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ModelComponent } from './model/model.component';
     MaterialModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    CarModelService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

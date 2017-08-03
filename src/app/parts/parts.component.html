@@ -1,7 +1,11 @@
-<div style="background-color:red;">
-    <md-list>
-        <md-list-item> Pepper</md-list-item>
-        <md-list-item> Salt </md-list-item>
-        <md-list-item> Paprika </md-list-item>
+<div>
+    <md-list dense>
+        <md-list-item *ngFor="let feature of carModel.features">
+            <md-select formControlName="formControlName" placeholder="{{feature.name}}" floatPlaceholder="always">
+                <md-option *ngFor="let option of feature.options" [value]="option">
+                    {{option.name}}
+                </md-option>
+            </md-select>
+        </md-list-item>
     </md-list>
 </div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CarModel } from 'app/car-model';
 import { CarFeatures } from 'app/car-features';
+import { Observable } from 'rxjs/Rx';
 
 const CARFEATURES: CarFeatures[] = [
 {id: 1, name: 'Color', tooltip: '', options: [
@@ -43,5 +44,9 @@ const CARMODELS: CarModel[] = [
 export class CarModelService {
 
   constructor() { }
+
+  public getCarModels(): Observable<CarModel[]> {
+    return Observable.of(CARMODELS);
+  }
 
 }
