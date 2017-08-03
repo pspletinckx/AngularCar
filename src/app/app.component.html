@@ -1,6 +1,27 @@
 <!--The whole content below can be removed with the new code.-->
 <div style="text-align:center">
     <car-model></car-model>
-    <car-parts></car-parts>
-    <car-preview></car-preview>
-    <car-preset></car-preset>
+    <!-- <div layout="column">
+        <div flex="30">
+            <car-parts></car-parts>
+        </div>
+
+        <div flex="50">
+            <car-preview></car-preview>
+        </div>
+        <div>
+            <car-preset></car-preset>
+        </div>
+
+    </div> -->
+    <md-grid-list cols="4" [rowHeight]="200" [gutterSize]="'1px'">
+        <md-grid-tile [colspan]="1" [rowspan]="1">
+            <car-parts></car-parts>
+        </md-grid-tile>
+        <md-grid-tile [colspan]="2" [rowspan]="1">
+            <car-preview></car-preview>
+        </md-grid-tile>
+        <md-grid-tile [colspan]="1" [rowspan]="1">
+            <car-preset></car-preset>
+        </md-grid-tile>
+    </md-grid-list>
