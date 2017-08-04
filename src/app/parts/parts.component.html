@@ -3,6 +3,7 @@
     <md-list dense>
         <md-list-item *ngFor="let feature of carModel.features" (mouseover)="hoverFeature(feature)">
             <md-select formControlName="formControlName" placeholder="{{feature.name}}" floatPlaceholder="always">
+                <!--[(ngModel)]="feature.state"> -->
                 <md-option *ngFor="let option of feature.options" [value]="option" (mouseover)="hoverOption(option)">
                     {{option.name}}
                 </md-option>

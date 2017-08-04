@@ -1,4 +1,18 @@
 .preset-container {
-    width: 100px;
+    width: 150px;
     padding: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+md-button {
+    padding-bottom: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+md-list-item {
+    height: 75px;
 }

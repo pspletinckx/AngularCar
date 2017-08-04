@@ -1,8 +1,11 @@
 <div class="preset-container">
-    <a md-raised-button href="" color="primary">Save</a>
-    <md-list>
-        <md-list-item>Item 1</md-list-item>
-        <md-list-item>Item 2</md-list-item>
-        <md-list-item>Item 3</md-list-item>
-    </md-list>
+
+    <div class="preset-items">
+        <md-list dense>
+            <md-list-item *ngFor="let model of presets" (click)="loadPreset(model)">
+                <img src="{{model.image}}" alt="">
+            </md-list-item>
+        </md-list>
+    </div>
+    <a md-raised-button (click)="savePreset()" color="primary">Save</a>
 </div>

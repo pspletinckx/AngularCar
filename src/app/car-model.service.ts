@@ -4,40 +4,52 @@ import { CarFeatures } from 'app/car-features';
 import { Observable } from 'rxjs/Rx';
 // tslint:disable:max-line-length
 const CARFEATURES: CarFeatures[] = [
-    {id: 1, name: 'Color', tooltip: '', image: '', options: [
+    {id: 1, name: 'Color', tooltip: '', image: '',
+    state: {id: 1, name: 'Absolute Red', tooltip: '', image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GG2/P05/all/00/image.jpg'},
+    options: [
       {id: 1, name: 'Absolute Red', tooltip: '', image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GG2/P05/all/00/image.jpg'},
-      {id: 1, name: 'Pastel Green', tooltip: '', image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GP9/P05/all/00/image.jpg'},
-      {id: 1, name: 'Limelight Green', tooltip: '', image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GN6/P05/all/00/image.jpg'},
-      {id: 1, name: 'Switchblade Silver', tooltip: '', image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GAN/P05/all/00/image.jpg'},
+      {id: 2, name: 'Pastel Green', tooltip: '', image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GP9/P05/all/00/image.jpg'},
+      {id: 3, name: 'Limelight Green', tooltip: '', image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GN6/P05/all/00/image.jpg'},
+      {id: 4, name: 'Switchblade Silver', tooltip: '', image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GAN/P05/all/00/image.jpg'},
   ] },
-    {id: 1, name: 'Velgen', tooltip: '', image: '', options: [
+    {id: 2, name: 'Velgen', tooltip: '', image: '',
+    state:  {id: 1, name: '16" Licht metalen velgen', tooltip: '6.0J x 16 ', image: '/assets/images/karl/velgen/weel1.jpg'},
+    options: [
       {id: 1, name: '16" Licht metalen velgen', tooltip: '6.0J x 16 ', image: '/assets/images/karl/velgen/weel1.jpg'},
-      {id: 1, name: '15" Alloy wheel', tooltip: '', image: '/assets/images/karl/velgen/weel2.jpg'},
-      {id: 1, name: 'Wieldeksel design-velg', tooltip: '', image: '/assets/images/karl/velgen/weel3.jpg'},
-      {id: 1, name: 'Stalen velgen', tooltip: '', image: '/assets/images/karl/velgen/weel4.jpg'},
+      {id: 2, name: '15" Alloy wheel', tooltip: '', image: '/assets/images/karl/velgen/weel2.jpg'},
+      {id: 3, name: 'Wieldeksel design-velg', tooltip: '', image: '/assets/images/karl/velgen/weel3.jpg'},
+      {id: 4, name: 'Stalen velgen', tooltip: '', image: '/assets/images/karl/velgen/weel4.jpg'},
   ] },
 
 ]
 const CARFEATURES2: CarFeatures[] = [
-  {id: 1, name: 'Color', tooltip: '', image: '', options: [
+  {id: 1, name: 'Color', tooltip: '', image: '',
+    state: {id: 1, name: 'Absolute Red', tooltip: '', image: ''},
+    options: [
     {id: 1, name: 'Absolute Red', tooltip: '', image: ''},
     {id: 1, name: 'Pastel Green', tooltip: '', image: ''},
     {id: 1, name: 'Limelight Green Red', tooltip: '', image: ''},
     {id: 1, name: 'Switchblade Silver', tooltip: '', image: ''},
   ] },
-  {id: 2, name: 'Getinte ruiten achteraan', tooltip: '', image: '', options: [
+  {id: 2, name: 'Getinte ruiten achteraan', tooltip: '', image: '',
+  state: {id: 1, name: 'Ja', tooltip: '', image: ''},
+  options: [
       {id: 1, name: 'Ja', tooltip: '', image: ''},
       {id: 2, name: 'Nee', tooltip: '', image: ''},
       ] },
 ]
 const CARFEATURES3: CarFeatures[] = [
-  {id: 1, name: 'Color', tooltip: '', image: '', options: [
+  {id: 1, name: 'Color', tooltip: '', image: '',
+  state: {id: 1, name: 'Absolute Red', tooltip: '', image: ''},
+   options: [
     {id: 1, name: 'Absolute Red', tooltip: '', image: ''},
     {id: 1, name: 'Pastel Green', tooltip: '', image: ''},
     {id: 1, name: 'Limelight Green Red', tooltip: '', image: ''},
     {id: 1, name: 'Switchblade Silver', tooltip: '', image: ''},
   ] },
-  {id: 2, name: 'Getinte ruiten achteraan', tooltip: '', image: '', options: [
+  {id: 2, name: 'Getinte ruiten achteraan', tooltip: '', image: '',
+  state:
+  {id: 1, name: 'Ja', tooltip: '', image: ''}, options: [
       {id: 1, name: 'Ja', tooltip: '', image: ''},
       {id: 2, name: 'Nee', tooltip: '', image: ''},
       ] },

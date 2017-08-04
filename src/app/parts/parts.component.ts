@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CarModel } from 'app/car-model';
 import { CarFeatures } from 'app/car-features'; // remove me later
 import { CarOptions } from 'app/car-options';
-import { CarModelService } from "app/car-model.service";
+import { CarModelService } from 'app/car-model.service';
 
 @Component({
   selector: 'car-parts',

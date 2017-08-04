@@ -6,4 +6,5 @@ export class CarFeatures {
     tooltip: string;
     options: CarOptions[];
     image: string;
+    state: CarOptions;
 }

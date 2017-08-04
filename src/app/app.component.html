@@ -3,6 +3,6 @@
     <div class="flexbox-row">
         <car-parts [carModel]="selectedModel" (preview)="setPreview($event)"></car-parts>
         <car-preview [preview]="previewImage"></car-preview>
-        <car-preset></car-preset>
+        <car-preset (save)="savePreset()" [presets]="presets" (onModelSelected)="selectModel($event)"></car-preset>
     </div>
 </div>
