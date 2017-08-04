@@ -1,8 +1,12 @@
 div {
-    border: solid 2px greenyellow;
-    width: 400px;
+    /* border: solid 2px greenyellow; */
+    width: 350px;
 }
 
 md-list-item {
     margin-bottom: 10px;
+}
+
+md-select {
+    min-width: 300px;
 }
