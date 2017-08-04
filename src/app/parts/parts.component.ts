@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CarModel } from 'app/car-model';
 import { CarFeatures } from 'app/car-features'; // remove me later
+import { CarOptions } from 'app/car-options';
+import { CarModelService } from "app/car-model.service";
 
 @Component({
   selector: 'car-parts',
@@ -10,25 +12,28 @@ import { CarFeatures } from 'app/car-features'; // remove me later
 export class PartsComponent implements OnInit {
 
 @Input() carModel: CarModel;
+@Output() preview: EventEmitter <string>;
 
-  constructor() { }
+  constructor(private service: CarModelService) {
+    this.preview = new EventEmitter <string>();
+  }
 
   ngOnInit() {
-    const CARFEATURES: CarFeatures[] = [
-      {id: 1, name: 'Color', tooltip: '', options: [
-      {id: 1, name: 'Absolute Red', tooltip: ''},
-      {id: 2, name: 'Pastel Green', tooltip: ''},
-      {id: 3, name: 'Limelight Green Red', tooltip: ''},
-      {id: 4, name: 'Switchblade Silver', tooltip: ''},
-      ] },
-      {id: 2, name: 'Getinte ruiten achteraan', tooltip: '', options: [
-      {id: 1, name: 'Ja', tooltip: ''},
-      {id: 2, name: 'Nee', tooltip: ''},
-      ] },
-]
+    this.service.getCarModels().subscribe(
+      (carmodels: CarModel[]) => {this.carModel = carmodels[0]; }
+    );
 
-this.carModel = {id: 1, name: 'KARL', builder: 'Opel', features: CARFEATURES,
-  image: 'https://opelimages.wao.zone/opelvis/images/2018A/0H/48/turn/GG2/5PF/all/00/image.jpg'}
+  }
+
+  hoverFeature(feature: CarFeatures): void {
+    if (feature.image.length > 5) { // if its filled at least
+      this.preview.emit(feature.image);
+    }
+  }
+  hoverOption(option: CarOptions): void {
+    if (option.image.length > 5) {
+      this.preview.emit(option.image);
+    }
   }
 
 }

@@ -1,13 +1,8 @@
 <div style="text-align:center">
     <car-model (onModelSelected)="selectModel($event)"></car-model>
-    <md-grid-list cols="4" [rowHeight]="200" [gutterSize]="'1px'">
-        <md-grid-tile [colspan]="1" [rowspan]="1">
-            <car-parts></car-parts>
-        </md-grid-tile>
-        <md-grid-tile [colspan]="2" [rowspan]="1">
-            <car-preview></car-preview>
-        </md-grid-tile>
-        <md-grid-tile [colspan]="1" [rowspan]="1">
-            <car-preset></car-preset>
-        </md-grid-tile>
-    </md-grid-list>
+    <div class="flexbox-row">
+        <car-parts [carModel]="selectedModel" (preview)="setPreview($event)"></car-parts>
+        <car-preview [preview]="previewImage"></car-preview>
+        <car-preset></car-preset>
+    </div>
+</div>

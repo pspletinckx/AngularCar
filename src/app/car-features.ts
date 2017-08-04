@@ -5,4 +5,5 @@ export class CarFeatures {
     name: string;
     tooltip: string;
     options: CarOptions[];
+    image: string;
 }
