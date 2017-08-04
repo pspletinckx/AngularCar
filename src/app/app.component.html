@@ -1,19 +1,5 @@
-<!--The whole content below can be removed with the new code.-->
 <div style="text-align:center">
-    <car-model></car-model>
-    <!-- <div layout="column">
-        <div flex="30">
-            <car-parts></car-parts>
-        </div>
-
-        <div flex="50">
-            <car-preview></car-preview>
-        </div>
-        <div>
-            <car-preset></car-preset>
-        </div>
-
-    </div> -->
+    <car-model (onModelSelected)="selectModel($event)"></car-model>
     <md-grid-list cols="4" [rowHeight]="200" [gutterSize]="'1px'">
         <md-grid-tile [colspan]="1" [rowspan]="1">
             <car-parts></car-parts>

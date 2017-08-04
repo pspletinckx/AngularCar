@@ -9,4 +9,8 @@ import { CarModel } from 'app/car-model';
 export class AppComponent {
   title = 'car';
   selectedModel: CarModel;
+
+  selectModel(event: CarModel): void {
+    this.selectedModel = event;
+  }
 }

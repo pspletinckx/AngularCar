@@ -18,9 +18,25 @@ md-list-item {
     width: 100%;
 } */
 
+.scroll-container {
+    overflow-x: scroll;
+}
+
+.model-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 120%
+}
+
+.cover-image {
+    width: 25%;
+    position: relative;
+}
+
 h2 {
     position: absolute;
-    top: 100px;
+    bottom: 10px;
     left: 0;
     width: 100%;
     color: white;

@@ -2,14 +2,12 @@
     <span>Models come here</span>
 
 </md-toolbar>
-
-<md-grid-list cols="4" rowHeight="fit" [style.height]="'200px'" [gutterSize]="'1px'">
-    <md-grid-tile *ngFor="let model of models" [colspan]="1" [rowspan]="1">
-        <div class="cover-image">
+<div class="scroll-container">
+    <div class="model-container" [style.width]="25*models.length+'%'">
+        <div *ngFor="let model of models" class="cover-image" (click)="selectModel(model)">
             <img src="{{model.image}}" alt="">
             <h2>{{model.name}}</h2>
+
         </div>
-
-
-    </md-grid-tile>
-</md-grid-list>
+    </div>
+</div>
